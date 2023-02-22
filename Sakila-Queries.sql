@@ -133,7 +133,25 @@ order by count desc;
 
 -- 25. How many copies of the film Hunchback Impossible exist in the inventory system?
 
+-- 26. Using the tables payment and customer and the JOIN command, list the total paid by each customer. List the customers alphabetically by last name:
 
+/*
 
+SUB QUERIES
+*/
 
+-- 27. The music of Queen and Kris Kristofferson have seen an unlikely resurgence. As an unintended consequence, films starting with the letters K and Q have also soared in popularity. Use subqueries to display the titles of movies starting with the letters K and Q whose language is English.
 
+-- 28. Use subqueries to display all actors who appear in the film Alone Trip.
+
+-- 29. You want to run an email marketing campaign in Canada, for which you will need the names and email addresses of all Canadian customers. Use joins to retrieve this information.
+
+-- 30. Sales have been lagging among young families, and you wish to target all family movies for a promotion. Identify all movies categorized as family films.
+
+-- 31. Display the most frequently rented movies in descending order.
+
+-- 32. Write a query to display how much business, in dollars, each store brought in.
+
+-- 33. Write a query to display for each store its store ID, city, and country.
+
+-- 34. List the top five genres in gross revenue in descending order. (Hint: you may need to use the following tables: category, film_category, inventory, payment, and rental.)
