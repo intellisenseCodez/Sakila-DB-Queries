@@ -1,0 +1,33 @@
+
+
+1. Querying all data in the actor table
+2. Querying all data in the firm table
+3. Querying payment_id, payment_date, amount from payment table
+4. count the number of rows in payment table.
+5. Querying all data in the payment table where rental_id is null
+6. what the minimum and maximum lengths for all movie with 'PG' rating category 
+7. what the minimum, maximum lengths and average for all movie grouped by rating
+8. How many movies are there in each rating category?
+9. What movies has each actor starred in and who has starred in the most movies?
+
+Joining Tables
+1. Get the actors in each movie
+2. How many actors starred in each movie?
+3. How many movies has each actor played in?
+4. What is the total number of movies in each category held in inventory?
+4. Are there movies that are not in the inventory and if yes how many are there?
+5. Get the number of times each movie which is available for rent has been rented and their total revenue?
+6. Get the movies rental_rate that are not in the inventory.
+7. How many customers have not returned more than 1 DVD?
+8. How many movies has each customer rented?
+9. Most rented movies by genre and how much were payed for them
+10. Rental Count and Revenue by Genre and Date
+11. How many times each movie was rented by genre (for the movies which are available for rent)
+12. Find the movies that have waited in the shelf the most
+13. How many rented movies were returned late, early, and on time?
+14. Which movies of rating 'PG' are held in highest quantity in the inventory?
+
+
+https://www.kaggle.com/code/atanaskanev/sql-queries-analysis-and-visualization
+https://www.kaggle.com/code/dilarabr/dvd-rental-database-project-sqlite
+https://www.kaggle.com/code/fetchii/dvd-rental-database-simple-study
