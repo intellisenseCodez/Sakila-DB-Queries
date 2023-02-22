@@ -63,17 +63,77 @@ group by last_name
 having count > 1
 order by count desc;
 
--- Q14: Which actor has appeared in the most films?
+
+-- 14. Display the first and last names of all actors from the table actor
+select first_name, last_name
+from actor;
+
+-- 15. Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name.
+select upper(concat_ws(" ", first_name, last_name)) as ActorName
+from actor;
+
+-- 16. You need to find the ID number, first name, and last name of an actor, of whom you know only the first name, "Joe."
+select actor_id, first_name, last_name
+from actor
+where first_name = "Joe";
+
+-- 17. Find all actors whose last name contain the letters GEN:
+select *
+from actor
+where last_name like "%GEN%";
+
+-- 18. Find all actors whose last names contain the letters LI. Order the rows by last name and first name
+select *
+from actor
+where last_name like "%LI%"
+order by last_name, first_name;
+
+-- 19. Using IN, display the country_id and country columns of the following countries: Afghanistan, Bangladesh, and China:
+select country_id, country
+from country
+where country in ("Afghanistan", "Bangladesh", "China");
+
+-- 20. List the last names of actors, as well as how many actors have that last name.
+select last_name, count(last_name) as count
+from actor
+group by last_name
+order by count desc, last_name;
+
+-- 21.  List last names of actors and the number of actors who have that last name, but only for names that are shared by at least two actors
+select last_name, count(last_name) as count
+from actor
+group by last_name
+having count > 1
+order by count desc;
 
 
--- Q15: Is ‘Academy Dinosaur’ available for rent from Store 1?
+/*
+JOINING TABLES
 
--- Q16: What is that average running time of all the films in the sakila DB?
--- Q17: What is the average running time of films by category?
--- Q18: Display the first and last names of all actors from the table actor
--- Q19: Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name.
--- Q20: You need to find the ID number, first name, and last name of an actor, of whom you know only the first name, “Joe.” What is one query would you use to obtain this information?
--- Q21: Find all actors whose last name contain the letters GEN
+*/
+
+-- 22. Use JOIN to display the first and last names, as well as the address, of each staff member. Use the tables staff and address:
+select first_name, last_name, address, district, postal_code, city_id
+from staff s
+inner join address a on a.address_id = s.address_id;
+
+-- 23. Use JOIN to display the total amount rung up by each staff member in August of 2005. Use tables staff and payment.
+select last_name, first_name, sum(p.amount)
+from staff s
+inner join payment p on p.staff_id = s.staff_id
+where month(p.payment_date) = 8 and year(p.payment_date) = 2005
+group by s.last_name, s.first_name;
+
+-- 24. List each film and the number of actors who are listed for that film. Use tables film_actor and film. Use inner join.
+select f.title, count(*) as count
+from film_actor fa
+join film f on f.film_id = fa.film_id
+group by f.title
+order by count desc;
+
+-- 25. How many copies of the film Hunchback Impossible exist in the inventory system?
+
+
 
 
 
